@@ -1,0 +1,40 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedExtensionPaths:
+          1701989325: EXT:form_spamshield/Resources/Private/Forms/
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: false
+#      prototypes:
+#        standard:
+#          finishersDefinition:
+#            EmailToSender:
+#              options:
+#                templateRootPaths:
+#                  20: 'EXT:passionweb_sitepackage/Resources/Private/Forms/Emails/Contact/'
+#                partialRootPaths:
+#                  20: 'EXT:passionweb_sitepackage/Resources/Private/Forms/Partials/'
+#            EmailToReceiver:
+#              options:
+#                templateRootPaths:
+#                  20: 'EXT:passionweb_sitepackage/Resources/Private/Forms/Emails/Contact/'
+#                partialRootPaths:
+#                  20: 'EXT:passionweb_sitepackage/Resources/Private/Forms/Partials/'
+#          formElementsDefinition:
+#              Form:
+#                  renderingOptions:
+#                    templateRootPaths:
+#                      1541695106: 'EXT:passionweb_sitepackage/Resources/Private/Forms/Templates/'
+#                    partialRootPaths:
+#                      1541695106: 'EXT:passionweb_sitepackage/Resources/Private/Forms/Partials/'
+#                    layoutRootPaths:
+#                      1541695106: 'EXT:passionweb_sitepackage/Resources/Private/Forms/Layouts/'
+#                    translation:
+#                      translationFiles:
+#                        # translation files for the frontend
+#                        120: 'EXT:form/Resources/Private/Language/locallang.xlf'
+#                        130: 'EXT:passionweb_sitepackage/Resources/Private/Language/Form/locallang.xlf'
+#              DatePicker:
+#                  implementationClassName: TYPO3\CMS\Form\Domain\Model\FormElements\DatePicker
+

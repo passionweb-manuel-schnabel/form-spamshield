@@ -1,0 +1,6 @@
+module.tx_form.settings.yamlConfigurations {
+    1702023034 = EXT:form_spamshield/Configuration/Yaml/CustomFormSetup.yaml
+}
+plugin.tx_form.settings.yamlConfigurations {
+    1702023034 = EXT:form_spamshield/Configuration/Yaml/CustomFormSetup.yaml
+}

@@ -1,0 +1,281 @@
+
+renderingOptions:
+  submitButtonLabel: Send
+type: Form
+identifier: contact
+label: 'Contact form'
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Your inquiry'
+      recipients:
+        '{email}': '{firstname} {lastname}'
+      senderAddress: example@company.de
+      senderName: 'Company'
+      addHtmlPart: true
+      attachUploads: false
+      useFluidEmail: true
+      title: 'Your inquiry'
+    identifier: EmailToSender
+  -
+    options:
+      subject: 'New inquiry'
+      recipients:
+        example@company.de: 'Company'
+      senderAddress: '{email}'
+      senderName: '{firstname} {lastname}'
+      addHtmlPart: true
+      attachUploads: false
+      translation:
+        language: Default
+      useFluidEmail: true
+      title: 'New inquiry'
+    identifier: EmailToReceiver
+  -
+    options:
+      message: 'Thank you for your request. We will contact you soon.'
+      contentElementUid: ''
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: ''
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Row'
+        renderables:
+          -
+            type: Fieldset
+            identifier: fieldset-1
+            label: ''
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  xl:
+                    numbersOfColumnsToUse: '6'
+                  xxl:
+                    numbersOfColumnsToUse: '6'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: firstname
+                label: Firstname
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Firstname*'
+                    required: required
+                validators:
+                  -
+                    identifier: NotEmpty
+          -
+            type: Fieldset
+            identifier: fieldset-2
+            label: ''
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  xl:
+                    numbersOfColumnsToUse: '6'
+                  xxl:
+                    numbersOfColumnsToUse: '6'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: lastname
+                label: Lastname
+                properties:
+                  elementDescription: ''
+                  fluidAdditionalAttributes:
+                    placeholder: 'Lastname*'
+                    required: required
+                validators:
+                  -
+                    identifier: NotEmpty
+          -
+            type: Fieldset
+            identifier: fieldset-4
+            label: ''
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  xl:
+                    numbersOfColumnsToUse: '6'
+                  xxl:
+                    numbersOfColumnsToUse: '6'
+            renderables:
+              -
+                defaultValue: ''
+                type: Email
+                identifier: email
+                label: Email-Address
+                properties:
+                  elementDescription: ''
+                  fluidAdditionalAttributes:
+                    placeholder: 'Email-Address*'
+                    required: required
+                validators:
+                  -
+                    identifier: EmailAddress
+                  -
+                    identifier: NotEmpty
+          -
+            type: Fieldset
+            identifier: fieldset-3
+            label: ''
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  xl:
+                    numbersOfColumnsToUse: '6'
+                  xxl:
+                    numbersOfColumnsToUse: '6'
+            renderables:
+              -
+                defaultValue: ''
+                type: Telephone
+                identifier: telephone
+                label: Telephone
+                properties:
+                  elementDescription: ''
+                  fluidAdditionalAttributes:
+                    placeholder: Telephone
+          -
+            type: Fieldset
+            identifier: fieldset-5
+            label: ''
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  xl:
+                    numbersOfColumnsToUse: '6'
+                  xxl:
+                    numbersOfColumnsToUse: '6'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: company
+                label: Company
+                properties:
+                  elementDescription: ''
+                  fluidAdditionalAttributes:
+                    placeholder: Company
+          -
+            type: Fieldset
+            identifier: fieldset-6
+            label: ''
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  xl:
+                    numbersOfColumnsToUse: '6'
+                  xxl:
+                    numbersOfColumnsToUse: '6'
+            renderables:
+              -
+                defaultValue: Website
+                type: Url
+                identifier: website
+                label: Website
+                properties:
+                  elementDescription: ''
+          -
+            type: Fieldset
+            identifier: fieldset-7
+            label: ''
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '12'
+                  lg:
+                    numbersOfColumnsToUse: '12'
+                  xl:
+                    numbersOfColumnsToUse: '12'
+                  xxl:
+                    numbersOfColumnsToUse: '12'
+            renderables:
+              -
+                defaultValue: ''
+                type: Textarea
+                identifier: message
+                label: Message
+                properties:
+                  elementDescription: ''
+                  fluidAdditionalAttributes:
+                    placeholder: 'Message*'
+                    required: required
+                validators:
+                  -
+                    identifier: NotEmpty
+      -
+        type: SecureCheck
+        identifier: securecheck-1
+        label: 'Simple Spam Protection'
+        validators:
+          -
+            options:
+              securityLevel: '6'
+              formTimeout: '5'
+            identifier: SpamSecurityCheck
